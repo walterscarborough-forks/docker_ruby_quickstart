@@ -1,11 +1,14 @@
+
 FROM ruby:2.5
+ARG app_name=do_not_forget_an_app_name
+RUN echo "**** App name: $app_name ***"
 RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
-RUN mkdir /myapp
-WORKDIR /myapp
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+RUN mkdir /app_name
+WORKDIR /app_name
+COPY Gemfile /app_name/Gemfile
+COPY Gemfile.lock /app_name/Gemfile.lock
 RUN bundle install
-COPY . /myapp
+COPY . /app_name
 
 # Add a script to be executed every time the container starts.
 COPY entrypoint.sh /usr/bin/
