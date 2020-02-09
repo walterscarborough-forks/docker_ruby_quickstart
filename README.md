@@ -4,6 +4,7 @@ Files from https://docs.docker.com/compose/rails/
 Clone the repo
 ```
 git clone https://github.com/ericadohring/docker_ruby_quickstart.git && cd docker_ruby_quickstart
+git checkout centralize-configuration-of-app-name
 ```
 
 Run setup
