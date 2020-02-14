@@ -6,6 +6,12 @@ Clone the repo
 git clone https://github.com/ericadohring/docker_ruby_quickstart.git && cd docker_ruby_quickstart
 ```
 
+(Optional) Name Your App - modify the APP_NAME variable in env_vars.sh. It will default to myapp
+```
+APP_NAME=my_cool_app
+```
+
+
 Run setup
 ```
 sh ./setup.sh
