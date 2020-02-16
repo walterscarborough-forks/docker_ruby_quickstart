@@ -13,7 +13,7 @@ services:
     build: .
     command: bash -c \"rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'\"
     volumes:
-      - .:/$APP_NAME
+      - .:/${APP_NAME}
     ports:
       - \"3000:3000\"
     depends_on:
